@@ -1,8 +1,8 @@
-export default function Home() {
+export default function Friends() {
 
     return (
         <div className="text-white">
-            home
+            Arkadaşlar
         </div>
     )
 }

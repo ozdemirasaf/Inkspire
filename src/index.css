@@ -6,3 +6,9 @@ html,
 body {
     background-color: #030209;
 }
+
+#root {
+
+    height: 100%;
+
+}

@@ -9,10 +9,6 @@ export default function Navbar() {
         <nav className="bg-[#030209] border border-[#2F3336]">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-                <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">LOGO</span>
-                </Link>
-
                 <div className="flex items-center justify-between flex-1 md:flex md:w-auto md:order-1" id="navbar-search">
                     <div className="flex justify-center flex-1">
                         <input
@@ -23,9 +19,9 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden md:flex justify-center items-center space-x-4 gap-3">
-                        <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center transition-colors">
+                        {/* <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center transition-colors">
                             <img src="/images/moon.png" alt="" />
-                        </div>
+                        </div> */}
 
                         <div className="w-16 h-9 rounded-2xl text-[#fff] cursor-pointer flex items-center justify-center hover:bg-[#ffffff1a] transition-colors font-medium">
                             <Link>Giriş</Link>
@@ -50,9 +46,9 @@ export default function Navbar() {
 
             <div className={classNames("md:hidden bg-[#2D2B30]", { 'block': isOpen, 'hidden': !isOpen })}>
                 <div className="flex flex-col p-4 items-center justify-center gap-3">
-                    <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center">
+                    {/* <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center">
                         <img src="/images/moon.png" alt="" />
-                    </div>
+                    </div> */}
 
                     <div className="w-16 h-9 rounded-2xl text-[#fff] cursor-pointer flex items-center justify-center hover:bg-[#ffffff1a] font-medium">
                         <Link to="/login">Giriş</Link>
