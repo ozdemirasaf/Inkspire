@@ -23,9 +23,6 @@ export default function Navbar() {
                             <img src="/images/moon.png" alt="" />
                         </div> */}
 
-                        <div className="w-16 h-9 rounded-2xl text-[#fff] cursor-pointer flex items-center justify-center hover:bg-[#ffffff1a] transition-colors font-medium">
-                            <Link>Giriş</Link>
-                        </div>
                     </div>
                 </div>
 
@@ -50,9 +47,6 @@ export default function Navbar() {
                         <img src="/images/moon.png" alt="" />
                     </div> */}
 
-                    <div className="w-16 h-9 rounded-2xl text-[#fff] cursor-pointer flex items-center justify-center hover:bg-[#ffffff1a] font-medium">
-                        <Link to="/login">Giriş</Link>
-                    </div>
                 </div>
             </div>
         </nav>
