@@ -11,7 +11,7 @@ export default function Sidebar() {
 
     return (
         <div className="relative">
-            {/* Menü Düğmesi (Mobil) */}
+
             <button
                 onClick={toggleSidebar}
                 className="md:hidden fixed top-4 left-4 z-30 text-white flex mt-3 bg-[#030209] rounded-full p-2"
@@ -25,16 +25,14 @@ export default function Sidebar() {
                 />
             </button>
 
-            {/* Sidebar */}
             <aside className={classNames(
-                "fixed inset-y-0 left-0 z-20 w-64 bg-[#030209] border border-[#2F3336] shadow-md transition-transform duration-300 transform",
+                "fixed inset-y-0 left-0 z-20 w-64 bg-[#303030] border-none shadow-layouts transition-transform duration-300 transform",
                 {
                     "translate-x-0": isOpen,
                     "-translate-x-full": !isOpen
                 },
                 "md:translate-x-0 md:relative md:flex flex-col h-screen overflow-hidden"
             )}>
-
                 <div className="m-5 flex items-center justify-center">
                     <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">LOGO</span>
@@ -69,7 +67,7 @@ export default function Sidebar() {
                         </li>
                     </ul>
 
-                    <div className="w-full mt-auto md:relative fixed bottom-0 left-0 p-4 bg-[#030209]">
+                    <div className="w-full mt-auto md:relative fixed bottom-0 left-0 p-4">
                         <button className="bg-[#F3C432] w-full h-12 rounded-3xl text-[#fff] font-semibold">
                             Paylaşım
                         </button>
