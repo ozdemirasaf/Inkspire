@@ -26,7 +26,7 @@ export default function Sidebar() {
             </button>
 
             <aside className={classNames(
-                "fixed inset-y-0 left-0 z-20 w-64 bg-[#303030] border-none shadow-layouts transition-transform duration-300 transform",
+                "fixed inset-y-0 left-0 z-20 w-64 bg-[rgb(48,48,48)] border-none shadow-layouts transition-transform duration-300 transform",
                 {
                     "translate-x-0": isOpen,
                     "-translate-x-full": !isOpen
@@ -39,30 +39,36 @@ export default function Sidebar() {
                     </Link>
                 </div>
 
-                <nav className="flex flex-col justify-between flex-1 p-4 space-y-2 overflow-y-auto">
-                    <ul className="flex flex-col items-center gap-4">
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg w-full">
-                            <Link to="/" className="flex items-center text-white gap-3 w-full">
-                                <img src="images/menuHome.png" alt="Ana Sayfa" />
+                <nav className="flex flex-col justify-between flex-1 p-4 space-y-2 overflow-y-auto mt-4">
+                    <ul className="flex flex-col gap-10 w-full">
+                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <Link to="/" className="flex items-center text-white gap-3 w-full h-full">
+                                <img src="images/menuHome.png" alt="Ana Sayfa" className="h-6" />
                                 <span>Anasayfa</span>
                             </Link>
                         </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg w-full">
-                            <Link to="bildirimler" className="flex items-center text-white gap-3 w-full">
-                                <img src="images/menuNotification.png" className="h-8" alt="Bildirimler" />
+                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <Link to="bildirimler" className="flex items-center text-white gap-3 w-full h-full">
+                                <img src="images/menuNotification.png" alt="Bildirimler" className="h-6" />
                                 <span>Bildirimler</span>
                             </Link>
                         </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg w-full">
-                            <Link to="kesfet" className="flex items-center text-white gap-3 w-full">
-                                <img src="images/search.png" className="h-8" alt="Keşfet" />
+                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <Link to="kesfet" className="flex items-center text-white gap-3 w-full h-full">
+                                <img src="images/search.png" alt="Keşfet" className="h-6" />
                                 <span>Keşfet</span>
                             </Link>
                         </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg w-full">
-                            <Link to="arkadaslar" className="flex items-center text-white gap-3 w-full">
-                                <img src="images/add-user.png" className="h-8" alt="Arkadaşlar" />
+                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <Link to="arkadaslar" className="flex items-center text-white gap-3 w-full h-full">
+                                <img src="images/add-user.png" alt="Arkadaşlar" className="h-6" />
                                 <span>Arkadaşlar</span>
+                            </Link>
+                        </li>
+                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <Link to="profil" className="flex items-center text-white gap-3 w-full h-full">
+                                <img src="images/profile.png" alt="Profil" className="h-6" />
+                                <span>Profilim</span>
                             </Link>
                         </li>
                     </ul>
@@ -72,8 +78,9 @@ export default function Sidebar() {
                             Paylaşım
                         </button>
                     </div>
-
                 </nav>
+
+
             </aside>
 
             {isOpen && (

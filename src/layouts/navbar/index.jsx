@@ -1,9 +1,4 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import classNames from "classnames";
-
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav className="bg-[#303030] border border-[#2F3336] shadow-layouts transition-shadow">
@@ -17,36 +12,6 @@ export default function Navbar() {
                             placeholder="Search..."
                         />
                     </div>
-
-                    <div className="hidden md:flex justify-center items-center space-x-4 gap-3">
-                        {/* <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center transition-colors">
-                            <img src="/images/moon.png" alt="" />
-                        </div> */}
-
-                    </div>
-                </div>
-
-                <div className="flex md:order-2 md:ml-auto">
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="inline-flex items-center p-2 w-16 h-16 justify-center text-sm text-gray-500 rounded-lg md:hidden outline-none hover:bg-[#ffffff1a]"
-                        aria-controls="navbar-search"
-                        aria-expanded={isOpen}
-                    >
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div className={classNames("md:hidden bg-[#2D2B30]", { 'block': isOpen, 'hidden': !isOpen })}>
-                <div className="flex flex-col p-4 items-center justify-center gap-3">
-                    {/* <div className="h-11 w-11 rounded-full hover:bg-[#ffffff1a] cursor-pointer flex items-center justify-center">
-                        <img src="/images/moon.png" alt="" />
-                    </div> */}
-
                 </div>
             </div>
         </nav>
