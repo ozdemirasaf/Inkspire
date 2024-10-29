@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
+import RightSidebar from "./right-sidebar";
 
 export default function Main() {
     return (
@@ -12,6 +13,7 @@ export default function Main() {
                     <Outlet />
                 </main>
             </div>
+            <RightSidebar />
         </div>
     );
 }
