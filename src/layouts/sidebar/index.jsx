@@ -1,3 +1,4 @@
+
 import classNames from "classnames";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -11,7 +12,6 @@ export default function Sidebar() {
 
     return (
         <div className="relative">
-
             <button
                 onClick={toggleSidebar}
                 className="md:hidden fixed top-4 left-4 z-30 text-white flex mt-3 bg-[#030209] rounded-full p-2"
@@ -24,7 +24,6 @@ export default function Sidebar() {
                     })}
                 />
             </button>
-
             <aside className={classNames(
                 "fixed inset-y-0 left-0 z-20 w-64 bg-[rgb(48,48,48)] border-none shadow-layouts transition-transform duration-300 transform",
                 {

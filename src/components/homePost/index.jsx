@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function HomePost({post}) {
+export default function HomePost({ post }) {
 
     return (
         <div className="w-full sm:w-[20rem] md:w-[25rem] border-2 border-[#2F3336] bg-[#2D2B30] mb-4 rounded-xl p-4 flex flex-col hover:shadow-custom transition-shadow group">
