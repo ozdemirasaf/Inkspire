@@ -9,8 +9,8 @@ export default function Home() {
             <div className="p-4 flex flex-col gap-4">
 
                 {Posts.map(post => (
-                    <Link>
-                        <HomePost post={post} key={post.id} />
+                    <Link key={post.id}>
+                        <HomePost post={post} />
                     </Link>
                 ))}
             </div>

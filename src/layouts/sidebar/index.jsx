@@ -40,40 +40,52 @@ export default function Sidebar() {
 
                 <nav className="flex flex-col justify-between flex-1 p-4 space-y-2 overflow-y-auto mt-4">
                     <ul className="flex flex-col gap-10 w-full">
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <Link to="/" className="flex items-center text-white gap-3 w-full h-full">
+                        <Link to="/" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <li className="flex items-center text-white gap-3 w-full h-full">
                                 <img src="images/menuHome.png" alt="Ana Sayfa" className="h-6" />
                                 <span>Anasayfa</span>
-                            </Link>
-                        </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <Link to="bildirimler" className="flex items-center text-white gap-3 w-full h-full">
+                            </li>
+                        </Link>
+
+                        <Link to="bildirimler" className="hover:bg-[#ffffff1a] relative transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <li className="flex items-center text-white gap-3 w-full h-full">
+
+                                <div className="absolute top-0.5 left-2.5 ">
+                                    <div className="w-5 h-5 rounded-full bg-[#c88720] flex items-center justify-center text-white text-[10px]">
+                                        1
+                                    </div>
+                                </div>
+
                                 <img src="images/menuNotification.png" alt="Bildirimler" className="h-6" />
                                 <span>Bildirimler</span>
-                            </Link>
-                        </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <Link to="kesfet" className="flex items-center text-white gap-3 w-full h-full">
+                            </li>
+                        </Link>
+
+                        <Link to="kesfet" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <li className="flex items-center text-white gap-3 w-full h-full">
                                 <img src="images/search.png" alt="Keşfet" className="h-6" />
                                 <span>Keşfet</span>
-                            </Link>
-                        </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <Link to="arkadaslar" className="flex items-center text-white gap-3 w-full h-full">
+                            </li>
+                        </Link>
+
+                        <Link to="arkadaslar" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <li className="flex items-center text-white gap-3 w-full h-full">
                                 <img src="images/add-user.png" alt="Arkadaşlar" className="h-6" />
                                 <span>Arkadaşlar</span>
-                            </Link>
-                        </li>
-                        <li className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <Link to="profil" className="flex items-center text-white gap-3 w-full h-full">
+                            </li>
+                        </Link>
+
+                        <Link to="profil" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                            <li className="flex items-center text-white gap-3 w-full h-full">
                                 <img src="images/profile.png" alt="Profil" className="h-6" />
                                 <span>Profilim</span>
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
+
                     </ul>
 
                     <div className="w-full mt-auto md:relative fixed bottom-0 left-0 p-4">
-                        <button className="bg-[#F3C432] w-full h-12 rounded-3xl text-[#fff] font-semibold">
+                        <button className="bg-[#c88720] w-full h-12 rounded-3xl text-[#fff] font-semibold">
                             Paylaşım
                         </button>
                     </div>
@@ -82,12 +94,14 @@ export default function Sidebar() {
 
             </aside>
 
-            {isOpen && (
-                <div
-                    onClick={toggleSidebar}
-                    className="fixed inset-0 bg-black opacity-50 z-10 md:hidden"
-                ></div>
-            )}
-        </div>
+            {
+                isOpen && (
+                    <div
+                        onClick={toggleSidebar}
+                        className="fixed inset-0 bg-black opacity-50 z-10 md:hidden"
+                    ></div>
+                )
+            }
+        </div >
     );
 }

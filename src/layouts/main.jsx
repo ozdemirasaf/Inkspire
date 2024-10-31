@@ -1,9 +1,14 @@
 import { Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 import RightSidebar from "./right-sidebar";
 
 export default function Main() {
+
+    const location = useLocation();
+    const hideRightSidebar = location.pathname === '/' || location.pathname === '/kesfet';
+
     return (
         <div className="flex h-screen">
             <Sidebar />
@@ -13,7 +18,9 @@ export default function Main() {
                     <Outlet />
                 </main>
             </div>
-            <RightSidebar />
+            {hideRightSidebar && (
+                <RightSidebar />
+            )}
         </div>
     );
 }

@@ -49,4 +49,25 @@ const Posts = [
 
 ]
 
-export { Posts }
+const TrendPosts = [
+    {
+        id: "1",
+        userAvatar: '/images/boy.png',
+        description: `Yüzük Kardeşliği`,
+        like: '15,600'
+    },
+    {
+        id: "2",
+        userAvatar: '/images/boy.png',
+        description: `Hobbit Beş Ordu`,
+        like: '4,000'
+    },
+    {
+        id: "3",
+        userAvatar: '/images/boy.png',
+        description: `Harry Potter`,
+        like: '500'
+    }
+]
+
+export { Posts, TrendPosts }
