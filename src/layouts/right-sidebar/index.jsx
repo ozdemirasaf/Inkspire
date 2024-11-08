@@ -28,7 +28,7 @@ export default function RightSidebar() {
 
                         {TrendPosts.length > 3 && (
                             <div className="w-full p-4">
-                                <button className="bg-[#f3c432] w-32 h-8 rounded-3xl text-white text-[16px] font-semibold">Daha Fazla</button>
+                                <button className="bg-[#c88720] w-32 h-8 rounded-3xl text-white text-[16px] font-semibold">Daha Fazla</button>
                             </div>
                         )}
 

@@ -8,6 +8,10 @@ const Posts = [
         postImages: [
             '/movies-books-img/besOrdu.jpg'
         ],
+        categories: [
+            "Macera",
+            "fantastik"
+        ],
         postInfo: {
             heart: '13k',
             commit: '3k'
@@ -22,6 +26,10 @@ const Posts = [
         postDescription: `Yüzüklerin Efendisi: Yüzük Kardeşliği, Peter Jackson'ın yönettiği Yüzüklerin Efendisi üçlemesinin birinci filmidir ve 2001 yılında gösterime girmiştir. J. R. R.`,
         postImages: [
             '/movies-books-img/yuzukKardesligi.jpg'
+        ],
+        categories: [
+            "Macera",
+            "fantastik"
         ],
         postInfo: {
             heart: '11k',
@@ -38,11 +46,31 @@ const Posts = [
         postImages: [
             '/movies-books-img/gucYuzukleri.jpg'
         ],
+        categories: [
+            "Dram"
+        ],
         postInfo: {
             heart: '42k',
             commit: '10k'
         },
         postDate: `Ekim 29, 2024`,
+        userName: 'orta_dunya',
+        userImg: '/images/boy.png',
+    },
+    {
+        id: 4,
+        postTitle: 'Felsefe Taşı',
+        postDescription: `Harry Potter ve Felsefe Taşı, Chris Columbus tarafından yönetilen ve Warner Bros. Pictures tarafından dağıtılan 2001 yapımı fantezi filmidir. J. K. Rowling'in 1997 tarihli aynı adlı romanından uyarlanan filmin senaryosu Steve Kloves tarafından yazılırken yapımcılığı David Heyman tarafından üstlenildi.`,
+        postImages: [],
+        categories: [
+            "Çocuk",
+            "Fantastik"
+        ],
+        postInfo: {
+            heart: '61k',
+            commit: '61k'
+        },
+        postDate: `Kasım 4, 2024`,
         userName: 'orta_dunya',
         userImg: '/images/boy.png',
     }
@@ -51,23 +79,44 @@ const Posts = [
 
 const TrendPosts = [
     {
-        id: "1",
+        id: 1,
         userAvatar: '/images/boy.png',
         description: `Yüzük Kardeşliği`,
         like: '15,600'
     },
     {
-        id: "2",
+        id: 2,
         userAvatar: '/images/boy.png',
         description: `Hobbit Beş Ordu`,
         like: '4,000'
     },
     {
-        id: "3",
+        id: 3,
         userAvatar: '/images/boy.png',
         description: `Harry Potter`,
         like: '500'
+    },
+    {
+        id: 4,
+        userAvatar: '/images/boy.png',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
     }
 ]
 
-export { Posts, TrendPosts }
+const Notifications = [
+    {
+        id: 1,
+        userAvatar: '/images/boy.png',
+        userName: 'User1',
+        notificationDescription: `Bu kullanıcı bir paylaşımda bulundı.`
+    },
+    {
+        id: 2,
+        userAvatar: '/images/boy.png',
+        userName: 'User2',
+        notificationDescription: `Bu kullanıcı paylaşımınıza bir yorum attı.`
+    }
+]
+
+export { Posts, TrendPosts, Notifications }

@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
+import PostCategories from "../PostCategories";
 
 export default function HomePost({ post }) {
 
     return (
         <div className="w-full sm:w-[20rem] md:w-[25rem] border-2 border-[#2F3336] bg-[#2D2B30] mb-4 rounded-xl p-4 flex flex-col hover:shadow-custom transition-shadow group">
             <div className="flex justify-center relative">
-                <img src={post.postImages} className="w-full rounded-md h-[19.89rem] object-cover object-top" alt="Hobbit: Beş Ordunun Savaşı" />
+
+                {
+                    post.postImages.length ? (
+                        <img src={post.postImages} className="w-full rounded-md h-[19.89rem] object-cover object-top" alt="Hobbit: Beş Ordunun Savaşı" />
+                    ) :
+                        null
+                }
+
 
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-[0.1] transition-opacity duration-300 rounded-md" />
             </div>
+            {
+                post.postImages.length > 0 ? (
+                    <PostCategories categories={post.categories} />
+                ) :
+                    null
+            }
 
-            <div className="mt-3">
+            <div>
                 <div className="flex items-center justify-center font-sm font-semibold text-white">
                     <h2 className="text-base sm:text-lg md:text-xl">{post.postTitle}</h2>
                 </div>
@@ -20,6 +34,13 @@ export default function HomePost({ post }) {
                         {post.postDescription}
                     </p>
                 </div>
+
+                {
+                    post.postImages.length <= 0 ? (
+                        <PostCategories categories={post.categories} />
+                    ) :
+                        null
+                }
 
                 <div className="mt-5 flex gap-4 items-center">
                     <img src={post.userImg} className="w-[3rem] sm:w-[4.063rem] p-1.5 rounded-full border border-[#ffffff27]" alt="Profile User" />
