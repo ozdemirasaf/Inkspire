@@ -7,7 +7,7 @@ import RightSidebar from "./right-sidebar";
 export default function Main() {
 
     const location = useLocation();
-    const hideRightSidebar = location.pathname === '/' || location.pathname === '/kesfet';
+    const hideRightSidebar = location.pathname === '/';
 
     return (
         <div className="flex h-screen">
