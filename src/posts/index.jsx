@@ -119,4 +119,43 @@ const Notifications = [
     }
 ]
 
-export { Posts, TrendPosts, Notifications }
+const friendsAdd = [
+    {
+        id: 1,
+        avatar: "/images/boy.png",
+        userName: "Asaf",
+        bio: `En sevdiğim film ve kitap serisi yüzükler efendisi.`
+    },
+    {
+        id: 2,
+        avatar: "/images/boy.png",
+        userName: "Zeynep",
+        bio: `En sevdiğim film ve kitap serisi Harry Potter.`
+    },
+    {
+        id: 3,
+        avatar: "/images/boy.png",
+        userName: "Ahmet",
+        bio: `En sevdiğim film ve kitap serisi Güç yüzükleri.`
+    },
+    {
+        id: 4,
+        avatar: "/images/boy.png",
+        userName: "Zehra",
+        bio: `Beni takip edinn.`
+    },
+    {
+        id: 5,
+        avatar: "/images/boy.png",
+        userName: "Özdemir asaf",
+        bio: `Klasik kitapları çok severim.`
+    },
+    {
+        id: 6,
+        avatar: "/images/boy.png",
+        userName: "Elif",
+        bio: ``
+    },
+]
+
+export { Posts, TrendPosts, Notifications, friendsAdd }

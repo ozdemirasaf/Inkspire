@@ -1,8 +1,11 @@
-export default function Friends() {
 
+import FriendsAdd from "../../components/friendsAdd";
+
+export default function Friends() {
     return (
-        <div className="text-white">
-            Arkadaşlar
-        </div>
-    )
+        <>
+            <FriendsAdd />
+        </>
+
+    );
 }
