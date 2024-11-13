@@ -81,7 +81,7 @@ export default function Sidebar() {
                             </li>
                         </Link>
 
-                        <Link to="profil" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
+                        <Link to="profile" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
                             <li className="flex items-center text-white gap-3 w-full h-full">
                                 <img src="images/profile.png" alt="Profil" className="h-6" />
                                 <span>Profilim</span>

@@ -3,11 +3,19 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 import RightSidebar from "./right-sidebar";
+import { useState, useEffect } from "react";
 
 export default function Main() {
-
     const location = useLocation();
-    const hideRightSidebar = location.pathname === '/';
+    const [myLocation, setMyLocation] = useState(false);
+
+    useEffect(() => {
+        if (location.pathname === '/' || location.pathname === '/profile') {
+            setMyLocation(true);
+        } else {
+            setMyLocation(false);
+        }
+    }, [location.pathname]);
 
     return (
         <div className="flex h-screen">
@@ -18,8 +26,9 @@ export default function Main() {
                     <Outlet />
                 </main>
             </div>
-            {hideRightSidebar && (
-                <RightSidebar />
+
+            {myLocation && (
+                <RightSidebar contentType={location.pathname} />
             )}
         </div>
     );
