@@ -8,7 +8,9 @@ body {
 }
 
 #root {
-
     height: 100%;
+}
 
+.active-link {
+ border-bottom: 2px;   
 }

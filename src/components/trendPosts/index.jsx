@@ -3,7 +3,7 @@ import { TrendPosts } from "../../posts";
 export default function TrendPost() {
 
     return (
-        <>
+        <div className="hidden lg:block">
             <div className="text-white text-[18px] font-bold border-b border-[#2F3336]">
                 <h2>Trend Postlar</h2>
             </div>
@@ -34,6 +34,6 @@ export default function TrendPost() {
 
                 </ul >
             </div>
-        </>
+        </div>
     )
 }

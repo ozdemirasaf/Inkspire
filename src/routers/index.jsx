@@ -5,6 +5,8 @@ import Notification from '../pages/notification'
 import Discover from '../pages/discover'
 import Friends from '../pages/friends'
 import Profile from '../pages/profile'
+import MyProfile from '../pages/Settings/myProfile'
+import Security from '../pages/Settings/security'
 
 const router = createBrowserRouter([
     {
@@ -15,7 +17,14 @@ const router = createBrowserRouter([
             { path: 'bildirimler', element: <Notification /> },
             { path: 'kesfet', element: <Discover /> },
             { path: 'arkadaslar', element: <Friends /> },
-            { path: 'profile', element: <Profile /> },
+            {
+                path: 'profile',
+                element: <Profile />,
+                children: [
+                    { index: true, element: <MyProfile /> },
+                    { path: 'security', element: <Security /> }
+                ]
+            },
 
         ]
     }

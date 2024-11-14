@@ -15,6 +15,7 @@ export default function Sidebar() {
 
     return (
         <div className="relative">
+
             <button
                 onClick={toggleSidebar}
                 className="md:hidden fixed top-4 left-4 z-30 text-white flex mt-3 bg-[#030209] rounded-full p-2"
@@ -27,6 +28,7 @@ export default function Sidebar() {
                     })}
                 />
             </button>
+
             <aside className={classNames(
                 "fixed inset-y-0 left-0 z-20 w-64 bg-[rgb(48,48,48)] border-none shadow-layouts transition-transform duration-300 transform",
                 {
@@ -35,6 +37,8 @@ export default function Sidebar() {
                 },
                 "md:translate-x-0 md:relative md:flex flex-col h-screen overflow-hidden"
             )}>
+
+
                 <div className="m-5 flex items-center justify-center">
                     <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">LOGO</span>
