@@ -14,3 +14,13 @@ body {
 .active-link {
  border-bottom: 2px;   
 }
+
+select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #2d2b30;
+    color: #d0cccc;
+    outline: none;
+  }
+  

@@ -13,18 +13,7 @@ export default function Settings() {
     return (
         <div className="flex flex-col gap-3">
 
-            <button
-                onClick={toggleSidebar}
-                className="md:hidden fixed top-4 left-4 z-30 text-white flex mt-3 bg-[#030209] rounded-full p-2"
-            >
-                <img
-                    src="images/arrowLeft.png"
-                    alt="Menü"
-                    className={classNames("h-6 w-6 transition-transform duration-300", {
-                        "rotate-180": isOpen
-                    })}
-                />
-            </button>
+
 
             <div className="text-white text-[18px] font-bold border-b border-[#2F3336] p-1">
                 <h2>Ayarlar</h2>

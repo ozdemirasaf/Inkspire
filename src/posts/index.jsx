@@ -37,7 +37,7 @@ const Posts = [
         },
         postDate: `Ekim 27, 2024`,
         userName: 'Kullanici',
-        userImg: '/images/boy.png',
+        userImg: '/images/boy2.png',
     },
     {
         id: 3,
@@ -55,7 +55,7 @@ const Posts = [
         },
         postDate: `Ekim 29, 2024`,
         userName: 'orta_dunya',
-        userImg: '/images/boy.png',
+        userImg: '/images/girl.png',
     },
     {
         id: 4,
@@ -72,7 +72,7 @@ const Posts = [
         },
         postDate: `Kasım 4, 2024`,
         userName: 'orta_dunya',
-        userImg: '/images/boy.png',
+        userImg: '/images/boy3.png',
     }
 
 ]
@@ -86,19 +86,19 @@ const TrendPosts = [
     },
     {
         id: 2,
-        userAvatar: '/images/boy.png',
+        userAvatar: '/images/boy2.png',
         description: `Hobbit Beş Ordu`,
         like: '4,000'
     },
     {
         id: 3,
-        userAvatar: '/images/boy.png',
+        userAvatar: '/images/boy3.png',
         description: `Harry Potter`,
         like: '500'
     },
     {
         id: 4,
-        userAvatar: '/images/boy.png',
+        userAvatar: '/images/girl.png',
         description: `Örümcek Adam: Eve Dönüş Yok`,
         like: '10,000'
     }
@@ -107,13 +107,13 @@ const TrendPosts = [
 const Notifications = [
     {
         id: 1,
-        userAvatar: '/images/boy.png',
+        userAvatar: '/images/boy2.png',
         userName: 'User1',
         notificationDescription: `Bu kullanıcı bir paylaşımda bulundı.`
     },
     {
         id: 2,
-        userAvatar: '/images/boy.png',
+        userAvatar: '/images/girl.png',
         userName: 'User2',
         notificationDescription: `Bu kullanıcı paylaşımınıza bir yorum attı.`
     }
@@ -128,31 +128,31 @@ const friendsAdd = [
     },
     {
         id: 2,
-        avatar: "/images/boy.png",
+        avatar: "/images/girl.png",
         userName: "Zeynep",
         bio: `En sevdiğim film ve kitap serisi Harry Potter.`
     },
     {
         id: 3,
-        avatar: "/images/boy.png",
+        avatar: "/images/boy2.png",
         userName: "Ahmet",
         bio: `En sevdiğim film ve kitap serisi Güç yüzükleri.`
     },
     {
         id: 4,
-        avatar: "/images/boy.png",
+        avatar: "/images/boy3.png",
         userName: "Zehra",
         bio: `Beni takip edinn.`
     },
     {
         id: 5,
-        avatar: "/images/boy.png",
+        avatar: "/images/boy2.png",
         userName: "Özdemir asaf",
         bio: `Klasik kitapları çok severim.`
     },
     {
         id: 6,
-        avatar: "/images/boy.png",
+        avatar: "/images/girl.png",
         userName: "Elif",
         bio: ``
     },

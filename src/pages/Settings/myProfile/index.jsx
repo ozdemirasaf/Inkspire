@@ -34,6 +34,11 @@ export default function MyProfile() {
 
     return (
         <div className="p-3 flex justify-center items-center flex-col gap-10">
+
+            <div className='w-full flex justify-end'>
+                <button>Tıkla</button>
+            </div>
+
             <div className="flex flex-col items-center justify-center gap-9">
                 <div className='flex justify-center items-center flex-col'>
                     <div
