@@ -26,12 +26,12 @@ export default function Sidebar() {
 
             {/* Sidebar açma butonu */}
 
-            <button
-                onClick={handleSidebarToggle}
+            {/* <button
+                onClick={}
                 className="lg:hidden fixed top-4 left-4 z-30  flex items-center justify-center "
             >
                 <img src="/images/hamburgerMenu.png" alt="Menu Icon" className="w-6 h-6" />
-            </button>
+            </button> */}
 
             {/* Sidebar */}
             <aside

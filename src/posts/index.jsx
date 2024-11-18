@@ -81,24 +81,70 @@ const TrendPosts = [
     {
         id: 1,
         userAvatar: '/images/boy.png',
+        userName: 'Oliver',
         description: `Yüzük Kardeşliği`,
         like: '15,600'
     },
     {
         id: 2,
         userAvatar: '/images/boy2.png',
+        userName: 'Harry',
         description: `Hobbit Beş Ordu`,
         like: '4,000'
     },
     {
         id: 3,
-        userAvatar: '/images/boy3.png',
+        userAvatar: '/images/girl.png',
+        userName: 'Jack',
         description: `Harry Potter`,
         like: '500'
     },
     {
         id: 4,
-        userAvatar: '/images/girl.png',
+        userAvatar: '/images/boy.png',
+        userName: 'Jacob',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 5,
+        userAvatar: '/images/boy2.png',
+        userName: 'Charlie',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 6,
+        userAvatar: '/images/boy.png',
+        userName: 'Thomas',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 7,
+        userAvatar: '/images/boy2.png',
+        userName: 'George',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 8,
+        userAvatar: '/images/boy3.png',
+        userName: 'Oscar',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 9,
+        userAvatar: '/images/boy2.png',
+        userName: 'James',
+        description: `Örümcek Adam: Eve Dönüş Yok`,
+        like: '10,000'
+    },
+    {
+        id: 10,
+        userAvatar: '/images/boy.png',
+        userName: 'William',
         description: `Örümcek Adam: Eve Dönüş Yok`,
         like: '10,000'
     }
