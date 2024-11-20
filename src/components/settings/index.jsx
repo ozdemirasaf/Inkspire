@@ -1,19 +1,14 @@
 import classNames from "classnames";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useRightbar } from "../../reducers/hooks";
 
 export default function Settings() {
 
-    const [isOpen, setItOpen] = useState(false)
+    console.log(" useRightbar : ", useRightbar());
 
-    const toggleSidebar = () => {
-        setIsOpen(prevState => !prevState);
-    }
 
     return (
-        <div className="flex flex-col gap-3">
-
-
+        <div className={classNames('flex flex-col gap-3 md:flex')}>
 
             <div className="text-white text-[18px] font-bold border-b border-[#2F3336] p-1">
                 <h2>Ayarlar</h2>

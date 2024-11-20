@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import { friendsAdd } from "../../posts";
 
-console.log(friendsAdd);
-
-
 export default function FriendsAdd() {
 
     const half = Math.floor(friendsAdd.length / 2);

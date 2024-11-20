@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import { rightbarGetStatus } from '../../../reducers/actions';
 
 export default function MyProfile() {
     const [image, setImage] = useState(null);
@@ -32,11 +32,24 @@ export default function MyProfile() {
         }
     };
 
+    const handleRightbarToggle = () => {
+        rightbarGetStatus()
+        console.log("tıklandı");
+
+    }
+
     return (
         <div className="p-3 flex justify-center items-center flex-col gap-10">
 
             <div className='w-full flex justify-end'>
-                <button>Tıkla</button>
+
+                <button
+                    type='button'
+                    onClick={handleRightbarToggle}
+                >
+                    Tıkla
+                </button>
+
             </div>
 
             <div className="flex flex-col items-center justify-center gap-9">

@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 import { Notifications } from "../../posts";
 import { useState } from "react";
 import { Box, Modal } from "@mui/material";
+import { useSetSidebar } from '../../reducers/hooks'
+import { sidebarGetStatus } from "../../reducers/actions";
 
 export default function Sidebar() {
     const notificationLength = Notifications.length;
+    const isActive = useSetSidebar()
 
     const [open, setOpen] = useState(false); // Modal için
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const handleSidebarToggle = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
 
     const handleOpen = () => {
         setOpen(true);
@@ -21,23 +19,32 @@ export default function Sidebar() {
         setOpen(false);
     };
 
+    const handleSidebarToggle = () => {
+        sidebarGetStatus()
+    }
+
+
     return (
         <div className="relative">
 
-            {/* Sidebar açma butonu */}
-
-            {/* <button
-                onClick={}
-                className="lg:hidden fixed top-4 left-4 z-30  flex items-center justify-center "
-            >
-                <img src="/images/hamburgerMenu.png" alt="Menu Icon" className="w-6 h-6" />
-            </button> */}
-
-            {/* Sidebar */}
             <aside
-                className={`fixed inset-y-0 left-0 z-20 w-64 bg-[rgb(48,48,48)] border-none shadow-layouts flex flex-col h-screen overflow-hidden transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed inset-y-0 left-0 z-20 w-64 bg-[rgb(48,48,48)] border-none shadow-layouts flex flex-col h-screen overflow-hidden transition-transform duration-300 ${isActive ? "translate-x-0" : "-translate-x-full"
                     } lg:translate-x-0`}
             >
+
+                {isActive && (
+                    <div className="lg:hidden">
+                        <button
+                            onClick={handleSidebarToggle}
+                            className="absolute top-4 left-4 z-10 flex items-center justify-center p-2 rounded-full hover:bg-[#3c3d3e] transition-all"
+                        >
+                            <img src="/images/hamburgerMenu.png" alt="Menu Icon" className="w-6 h-6" />
+                        </button>
+                    </div>
+                )}
+
+
+
                 <div className="m-5 flex items-center justify-center">
                     <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">LOGO</span>
