@@ -5,9 +5,14 @@ const Posts = [
         id: 1,
         postTitle: 'Hobbit',
         postDescription: `Hobbit: Beş Ordunun Savaşı, Peter Jackson'ın yönetmenliğini yaptığı 17 Aralık 2014 tarihinde gösterime giren destansı fantezi türündeki macera filmi. J. R. R. Tolkien'in 1937 yılında yazılmış Hobbit romanından uyarlanan üçlemenin üçüncü ve son filmidir`,
-        postImages: [
-            '/movies-books-img/besOrdu.jpg'
-        ],
+        photo: {
+            photoType: 'photo',
+            postImages: [
+                '/movies-books-img/besOrdu.jpg',
+                '/movies-books-img/besOrdu.jpg'
+            ],
+        },
+
         categories: [
             "Macera",
             "fantastik"
@@ -24,9 +29,14 @@ const Posts = [
         id: 2,
         postTitle: 'Yüzük Kardeşliği',
         postDescription: `Yüzüklerin Efendisi: Yüzük Kardeşliği, Peter Jackson'ın yönettiği Yüzüklerin Efendisi üçlemesinin birinci filmidir ve 2001 yılında gösterime girmiştir. J. R. R.`,
-        postImages: [
-            '/movies-books-img/yuzukKardesligi.jpg'
-        ],
+        photo: {
+            photoType: 'photo',
+            postImages: [
+                '/movies-books-img/yuzukKardesligi.jpg',
+                '/movies-books-img/yuzukKardesligi.jpg',
+                '/movies-books-img/yuzukKardesligi.jpg'
+            ],
+        },
         categories: [
             "Macera",
             "fantastik"
@@ -43,9 +53,15 @@ const Posts = [
         id: 3,
         postTitle: 'Güç Yüzükleri',
         postDescription: `Yüzüklerin Efendisi: Güç Yüzükleri, Amazon Prime Video için geliştirilen fantastik, kurgusal bir dizidir. J. R. R. Tolkien'in The Hobbit ve The Lord of the Rings kitaplarındaki olaylardan binlerce yıl öncesini anlatan dizi Orta Dünya'nın İkinci Çağında geçmektedir`,
-        postImages: [
-            '/movies-books-img/gucYuzukleri.jpg'
-        ],
+        photo: {
+            photoType: 'photo',
+            postImages: [
+                '/movies-books-img/gucYuzukleri.jpg',
+                '/movies-books-img/gucYuzukleri.jpg',
+                '/movies-books-img/gucYuzukleri.jpg',
+                '/movies-books-img/gucYuzukleri.jpg'
+            ],
+        },
         categories: [
             "Dram"
         ],
@@ -61,7 +77,10 @@ const Posts = [
         id: 4,
         postTitle: 'Felsefe Taşı',
         postDescription: `Harry Potter ve Felsefe Taşı, Chris Columbus tarafından yönetilen ve Warner Bros. Pictures tarafından dağıtılan 2001 yapımı fantezi filmidir. J. K. Rowling'in 1997 tarihli aynı adlı romanından uyarlanan filmin senaryosu Steve Kloves tarafından yazılırken yapımcılığı David Heyman tarafından üstlenildi.`,
-        postImages: [],
+        photo: {
+            photoType: 'text',
+            postImages: [],
+        },
         categories: [
             "Çocuk",
             "Fantastik"
@@ -73,7 +92,30 @@ const Posts = [
         postDate: `Kasım 4, 2024`,
         userName: 'orta_dunya',
         userImg: '/images/boy3.png',
-    }
+    },
+    {
+        id: 6,
+        postTitle: 'Hobbit',
+        postDescription: `Hobbit: Beş Ordunun Savaşı, Peter Jackson'ın yönetmenliğini yaptığı 17 Aralık 2014 tarihinde gösterime giren destansı fantezi türündeki macera filmi. J. R. R. Tolkien'in 1937 yılında yazılmış Hobbit romanından uyarlanan üçlemenin üçüncü ve son filmidir`,
+        photo: {
+            photoType: 'photo',
+            postImages: [
+                '/movies-books-img/besOrdu.jpg',
+            ],
+        },
+
+        categories: [
+            "Macera",
+            "fantastik"
+        ],
+        postInfo: {
+            heart: '13k',
+            commit: '3k'
+        },
+        postDate: `Ekim 26, 2024`,
+        userName: 'User1234',
+        userImg: '/images/boy.png',
+    },
 
 ]
 

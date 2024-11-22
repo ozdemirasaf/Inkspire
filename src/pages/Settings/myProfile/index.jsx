@@ -34,7 +34,7 @@ export default function MyProfile() {
 
     const handleRightbarToggle = () => {
         rightbarGetStatus()
-        console.log("tıklandı");
+        // console.log("tıklandı");
 
     }
 

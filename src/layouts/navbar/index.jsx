@@ -39,7 +39,6 @@ export default function Navbar() {
     //     }
     // };
 
-    console.log("altMenu : ", altMenu);
 
     return (
         <nav className="bg-[#303030] border border-[#2F3336] shadow-layouts transition-shadow">
