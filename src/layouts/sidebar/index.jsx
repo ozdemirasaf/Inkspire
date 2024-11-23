@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Notifications } from "../../posts";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Box, Modal } from "@mui/material";
 import { useSetSidebar } from '../../reducers/hooks'
 import { sidebarGetStatus } from "../../reducers/actions";
+import { sidebarMenu } from "../../components/sidebarMenu";
 
 export default function Sidebar() {
     const notificationLength = Notifications.length;
@@ -53,47 +54,34 @@ export default function Sidebar() {
 
                 <nav className="flex flex-col justify-between flex-1 p-4 space-y-2 overflow-y-auto mt-4">
                     <ul className="flex flex-col gap-10 w-full">
-                        <Link to="/" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <li className="flex items-center text-white gap-3 w-full h-full">
-                                <img src="images/menuHome.png" alt="Ana Sayfa" className="h-6" />
-                                <span>Anasayfa</span>
-                            </li>
-                        </Link>
 
-                        <Link to="bildirimler" className="hover:bg-[#ffffff1a] relative transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <li className="flex items-center text-white gap-3 w-full h-full">
-                                <div className="absolute top-0.5 left-2.5 ">
-                                    {notificationLength > 0 ? (
-                                        <div className="w-5 h-5 rounded-full bg-[#c88720] flex items-center justify-center text-white text-[10px]">
-                                            {notificationLength}
-                                        </div>
-                                    ) : null}
-                                </div>
-                                <img src="images/menuNotification.png" alt="Bildirimler" className="h-6" />
-                                <span>Bildirimler</span>
-                            </li>
-                        </Link>
+                        {
+                            sidebarMenu.map((menu, index) => (
+                                <NavLink
+                                    key={index}
+                                    to={menu.patch}
+                                    className={({ isActive }) =>
+                                        `hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center`
+                                    }
+                                >
+                                    {({ isActive }) => (
+                                        <li className="flex items-center text-white gap-3 w-full h-full">
 
-                        <Link to="kesfet" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <li className="flex items-center text-white gap-3 w-full h-full">
-                                <img src="images/search.png" alt="Keşfet" className="h-6" />
-                                <span>Keşfet</span>
-                            </li>
-                        </Link>
+                                            <div className="w-[1.641rem] h-[1.641rem] relative">
+                                                {isActive && menu.icon.passive}
+                                                {!isActive && menu.icon.active}
+                                            </div>
 
-                        <Link to="arkadaslar" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <li className="flex items-center text-white gap-3 w-full h-full">
-                                <img src="images/add-user.png" alt="Arkadaşlar" className="h-6" />
-                                <span>Arkadaşlar</span>
-                            </li>
-                        </Link>
+                                            <div className="pr-4 text-xl">
+                                                {menu.title}
+                                            </div>
+                                        </li>
+                                    )}
+                                </NavLink>
 
-                        <Link to="profile" className="hover:bg-[#ffffff1a] transition-colors p-2 rounded-lg h-12 flex items-center">
-                            <li className="flex items-center text-white gap-3 w-full h-full">
-                                <img src="images/profile.png" alt="Profil" className="h-6" />
-                                <span>Profilim</span>
-                            </li>
-                        </Link>
+                            ))
+                        }
+
                     </ul>
 
                     <div className="w-full mt-auto p-4">

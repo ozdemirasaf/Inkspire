@@ -1,5 +1,4 @@
 export default function Photo({ photo }) {
-    console.log("photo", photo);
 
     // Ortak CSS sınıflarını bir değişkene al
     const commonImgClasses = "w-full rounded-md object-cover object-top";

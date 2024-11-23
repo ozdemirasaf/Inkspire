@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { rightbarGetStatus } from '../../../reducers/actions';
+import { useRightbar } from '../../../reducers/hooks';
 
 export default function MyProfile() {
     const [image, setImage] = useState(null);
@@ -34,23 +35,32 @@ export default function MyProfile() {
 
     const handleRightbarToggle = () => {
         rightbarGetStatus()
-        // console.log("tıklandı");
-
     }
+
+
+    const useBar = useRightbar()
 
     return (
         <div className="p-3 flex justify-center items-center flex-col gap-10">
 
-            <div className='w-full flex justify-end'>
+            {useBar ? null : (
+                <div className='w-full flex lg:hidden justify-end'>
 
-                <button
-                    type='button'
-                    onClick={handleRightbarToggle}
-                >
-                    Tıkla
-                </button>
+                    <button
+                        type='button'
+                        onClick={handleRightbarToggle}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-[#fff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </button>
 
-            </div>
+                </div>
+            )}
+
 
             <div className="flex flex-col items-center justify-center gap-9">
                 <div className='flex justify-center items-center flex-col'>
